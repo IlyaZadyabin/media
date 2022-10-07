@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:qyre/core/core_styles.dart';
-import 'package:qyre/view/components/date_bar.dart';
 import 'package:qyre/view/components/glass_app_bar.dart';
+
+import 'components/expanded_horizontal_dates.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -48,34 +48,9 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             title: 'My Availability',
             controller: _controller,
           ),
-          SliverPadding(padding: EdgeInsets.all(10)),
-          SliverToBoxAdapter(
-            child: SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16),
-                child: Row(
-                  children: List<int>.generate(10, (i) => i).map((int index) {
-                    Color? circleColor;
-                    if (index == 0 || index == 3) {
-                      circleColor = CoreStyles.red;
-                    }
-                    if (index == 1) {
-                      circleColor = CoreStyles.blue;
-                    }
-                    return Padding(
-                      padding: const EdgeInsets.only(right: 8),
-                      child: DateBar(
-                        date: DateTime.now().add(Duration(days: index)),
-                        circleColor: circleColor,
-                      ),
-                    );
-                  }).toList(),
-                ),
-              ),
-            ),
-          ),
-          SliverPadding(padding: EdgeInsets.all(10)),
+          const SliverPadding(padding: EdgeInsets.all(10)),
+          const SliverToBoxAdapter(child: ExpandedHorizontalDates()),
+          const SliverPadding(padding: EdgeInsets.all(10)),
           SliverList(
             delegate: SliverChildBuilderDelegate(
               (BuildContext context, int index) {

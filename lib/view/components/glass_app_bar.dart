@@ -3,6 +3,8 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:qyre/core/core_styles.dart';
 
+import 'collapsed_horizontal_dates.dart';
+
 class GlassAppBar extends StatefulWidget {
   const GlassAppBar({
     super.key,
@@ -56,16 +58,7 @@ class _GlassAppBarState extends State<GlassAppBar> {
               alignment: Alignment.bottomCenter,
               child: SlideTransition(
                 position: _offsetAnimation,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(height: 40, width: 40, color: Colors.black),
-                    const SizedBox(width: 20),
-                    Container(height: 40, width: 40, color: Colors.black),
-                    const SizedBox(width: 20),
-                    Container(height: 40, width: 40, color: Colors.black),
-                  ],
-                ),
+                child: const CollapsedHorizontalDates(),
               ),
             ),
           ),
