@@ -12,7 +12,12 @@ class CollapsedHorizontalDates extends StatelessWidget {
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16),
+        padding: const EdgeInsets.only(
+          left: 16,
+          right: 16,
+          top: 8,
+          bottom: 8,
+        ),
         child: Row(
           children: List<int>.generate(10, (i) => i).map((int index) {
             Color? circleColor;
