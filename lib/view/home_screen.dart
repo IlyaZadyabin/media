@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:qyre/core/core_styles.dart';
 import 'package:qyre/view/components/collapsed_horizontal_dates.dart';
 import 'package:qyre/view/components/expanded_horizontal_dates.dart';
@@ -71,6 +72,60 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 color: CoreStyles.black,
               ),
         ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
+        backgroundColor: CoreStyles.veryBlack,
+        items: [
+          BottomNavigationBarItem(
+            icon: Padding(
+              padding: const EdgeInsets.only(top: 5),
+              child: SvgPicture.asset('assets/icons/house.svg'),
+            ),
+            label: 'home',
+          ),
+          BottomNavigationBarItem(
+            icon: Padding(
+              padding: const EdgeInsets.only(top: 5),
+              child: SvgPicture.asset('assets/icons/bars.svg'),
+            ),
+            label: 'info',
+          ),
+          BottomNavigationBarItem(
+            icon: SizedBox(
+              width: 30,
+              child: Stack(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(top: 5),
+                    child: SvgPicture.asset('assets/icons/bell.svg'),
+                  ),
+                  Align(
+                    alignment: Alignment.topRight,
+                    child: Container(
+                      width: 16,
+                      height: 16,
+                      decoration: const BoxDecoration(
+                        color: CoreStyles.red,
+                        shape: BoxShape.circle,
+                      ),
+                      child: Text(
+                        '2',
+                        textAlign: TextAlign.center,
+                        style: Theme.of(context)
+                            .textTheme
+                            .subtitle2
+                            ?.copyWith(color: CoreStyles.white),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            label: 'notifications',
+          ),
+        ],
       ),
       body: Stack(
         children: [
