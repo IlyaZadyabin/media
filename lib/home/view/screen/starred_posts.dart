@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:qyre/view/components/starred_post.dart';
+import 'package:qyre/home/view/components/starred_post.dart';
 
 class StarredPosts extends StatelessWidget {
   const StarredPosts({super.key});

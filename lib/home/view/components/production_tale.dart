@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:intl/intl.dart';
 import 'package:qyre/core/core_styles.dart';
+import 'package:qyre/gen/assets.gen.dart';
 
 class ProductionTale extends StatelessWidget {
   const ProductionTale({
@@ -10,14 +11,14 @@ class ProductionTale extends StatelessWidget {
     required this.location,
     required this.startDate,
     required this.endDate,
-    required this.image,
+    required this.imagePath,
   });
 
   final String title;
   final String location;
   final DateTime startDate;
   final DateTime endDate;
-  final AssetImage image;
+  final String imagePath;
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +32,7 @@ class ProductionTale extends StatelessWidget {
           ClipRRect(
             borderRadius: BorderRadius.circular(4),
             child: Image(
-              image: image,
+              image: AssetImage(imagePath),
               width: 70,
               height: 70,
               fit: BoxFit.cover,
@@ -66,7 +67,7 @@ class ProductionTale extends StatelessWidget {
                 ),
                 const SizedBox(width: 10),
                 SvgPicture.asset(
-                  'assets/icons/small_arrow_right.svg',
+                  Assets.icons.smallArrowRight.path,
                   width: 10,
                   height: 10,
                   color: CoreStyles.veryBlack,

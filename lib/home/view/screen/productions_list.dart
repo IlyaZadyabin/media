@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:qyre/core/core_styles.dart';
-import 'package:qyre/view/components/production_tale.dart';
+import 'package:qyre/gen/assets.gen.dart';
+import 'package:qyre/home/view/components/production_tale.dart';
 
 class ProductionsList extends StatelessWidget {
   const ProductionsList({super.key});
@@ -23,7 +24,7 @@ class ProductionsList extends StatelessWidget {
           location: 'Sweden',
           startDate: DateTime(2022, 1, 14),
           endDate: DateTime(2023, 2, 23),
-          image: const AssetImage('assets/images/prod1.png'),
+          imagePath: Assets.images.prod1.path,
         ),
         const SizedBox(height: 10),
         ProductionTale(
@@ -31,7 +32,7 @@ class ProductionsList extends StatelessWidget {
           location: 'Sweden',
           startDate: DateTime(2022, 1, 14),
           endDate: DateTime(2023, 2, 23),
-          image: const AssetImage('assets/images/prod2.png'),
+          imagePath: Assets.images.prod2.path,
         ),
       ],
     );

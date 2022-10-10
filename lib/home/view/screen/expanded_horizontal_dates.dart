@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:qyre/core/core_styles.dart';
-import 'package:qyre/view/components/date_bar.dart';
+import 'package:qyre/home/view/components/date_bar.dart';
 
 class ExpandedHorizontalDates extends StatelessWidget {
   const ExpandedHorizontalDates({super.key});

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:qyre/core/core_styles.dart';
+import 'package:qyre/gen/assets.gen.dart';
 
 class TaskPlate extends StatelessWidget {
   const TaskPlate({
@@ -57,7 +58,7 @@ class TaskPlate extends StatelessWidget {
               ),
               const SizedBox(width: 4),
               SvgPicture.asset(
-                'assets/icons/small_arrow_right.svg',
+                Assets.icons.smallArrowRight.path,
                 color: CoreStyles.veryBlack,
               ),
             ],

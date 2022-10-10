@@ -1,7 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:qyre/view/components/collapsed_horizontal_dates.dart';
+import 'package:qyre/home/view/screen/app_bar/collapsed_horizontal_dates.dart';
 
 class GlassFrostAppBar extends StatefulWidget {
   const GlassFrostAppBar({super.key, required this.mainScrollController});

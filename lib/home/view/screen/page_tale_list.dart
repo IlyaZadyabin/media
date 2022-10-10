@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:qyre/view/components/page_tale.dart';
+import 'package:qyre/gen/assets.gen.dart';
+import 'package:qyre/home/view/components/page_tale.dart';
 
 class PageTaleList extends StatelessWidget {
   const PageTaleList({super.key});
@@ -9,37 +10,37 @@ class PageTaleList extends StatelessWidget {
     return SizedBox(
       height: 150,
       child: Row(
-        children: const [
+        children: [
           Expanded(
             child: PageTale(
               title: 'My network',
               description: 'Connect and grow your network',
-              imagePath: 'assets/icons/people.svg',
-              colors: [
+              imagePath: Assets.icons.people.path,
+              colors: const [
                 Color(0xFF3465C3),
                 Color(0xFF5785DE),
               ],
             ),
           ),
-          SizedBox(width: 14),
+          const SizedBox(width: 14),
           Expanded(
             child: PageTale(
               title: 'Quick hire',
               description: 'Hire someone quickly today',
-              imagePath: 'assets/icons/qyre.svg',
-              colors: [
+              imagePath: Assets.icons.qyre.path,
+              colors: const [
                 Color(0xFFEC4E27),
                 Color(0xFFF47E61),
               ],
             ),
           ),
-          SizedBox(width: 14),
+          const SizedBox(width: 14),
           Expanded(
             child: PageTale(
               title: 'My CV',
               description: 'Keep your CV updated to get the best offers',
-              imagePath: 'assets/icons/document.svg',
-              colors: [
+              imagePath: Assets.icons.document.path,
+              colors: const [
                 Color(0xFF6B34C3),
                 Color(0xFF8E5EDB),
               ],

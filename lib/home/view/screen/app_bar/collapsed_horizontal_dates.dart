@@ -1,8 +1,6 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:qyre/core/core_styles.dart';
-import 'package:qyre/view/components/date_bar_collapsed.dart';
+import 'package:qyre/home/view/components/date_bar_collapsed.dart';
 
 class CollapsedHorizontalDates extends StatelessWidget {
   const CollapsedHorizontalDates({super.key});

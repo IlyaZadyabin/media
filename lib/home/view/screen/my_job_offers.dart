@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'job_offer.dart';
+import 'package:qyre/home/view/components/job_offer.dart';
 
 class MyJobOffers extends StatelessWidget {
   const MyJobOffers({super.key});

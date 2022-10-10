@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:qyre/core/core_styles.dart';
-import 'package:qyre/view/home_screen.dart';
+import 'package:qyre/home/view/screen/home_screen.dart';
 
 void main() {
   runApp(const App());

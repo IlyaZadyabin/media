@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:qyre/core/core_styles.dart';
+import 'package:qyre/gen/assets.gen.dart';
 
 class StarredPost extends StatelessWidget {
   const StarredPost({
@@ -59,11 +60,11 @@ class StarredPost extends StatelessWidget {
                     ),
               ),
               const Spacer(),
-              SvgPicture.asset('assets/icons/list.svg'),
+              SvgPicture.asset(Assets.icons.list.path),
               const SizedBox(width: 6),
-              SvgPicture.asset('assets/icons/image.svg'),
+              SvgPicture.asset(Assets.icons.image.path),
               const SizedBox(width: 6),
-              SvgPicture.asset('assets/icons/pin.svg'),
+              SvgPicture.asset(Assets.icons.pin.path),
             ],
           ),
           const SizedBox(height: 8),
