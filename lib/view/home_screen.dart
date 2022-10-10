@@ -1,15 +1,15 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:qyre/core/core_styles.dart';
-import 'package:qyre/view/components/collapsed_horizontal_dates.dart';
 import 'package:qyre/view/components/expanded_horizontal_dates.dart';
+import 'package:qyre/view/components/glass_frost_app_bar.dart';
+import 'package:qyre/view/components/productions_list.dart';
 import 'package:qyre/view/components/task_plate.dart';
 
-import 'components/page_tale.dart';
-import 'components/productions_list.dart';
+import 'components/my_job_offers.dart';
+import 'components/page_tale_list.dart';
+import 'components/starred_posts.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -18,14 +18,11 @@ class HomeScreen extends StatefulWidget {
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
+class _HomeScreenState extends State<HomeScreen> {
   late final ScrollController _scrollController;
-  late AnimationController _expandController;
-  late Animation<double> animation;
 
   @override
   void dispose() {
-    _expandController.dispose();
     _scrollController.dispose();
     super.dispose();
   }
@@ -33,24 +30,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   @override
   void initState() {
     super.initState();
-
-    _expandController = AnimationController(
-      vsync: this,
-      duration: const Duration(milliseconds: 200),
-    );
-    animation = CurvedAnimation(
-      parent: _expandController,
-      curve: Curves.fastOutSlowIn,
-    );
-
     _scrollController = ScrollController();
-    _scrollController.addListener(() {
-      if (_scrollController.offset > 150) {
-        _expandController.forward();
-      } else {
-        _expandController.reverse();
-      }
-    });
   }
 
   @override
@@ -170,81 +150,17 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                   const SizedBox(height: 30),
                   const ProductionsList(),
                   const SizedBox(height: 20),
-                  SizedBox(
-                    height: 150,
-                    child: Row(
-                      children: const [
-                        Expanded(
-                          child: PageTale(
-                            title: 'My network',
-                            description: 'Connect and grow your network',
-                            imagePath: 'assets/icons/people.svg',
-                            colors: [
-                              Color(0xFF3465C3),
-                              Color(0xFF5785DE),
-                            ],
-                          ),
-                        ),
-                        SizedBox(width: 14),
-                        Expanded(
-                          child: PageTale(
-                            title: 'Quick hire',
-                            description: 'Hire someone quickly today',
-                            imagePath: 'assets/icons/qyre.svg',
-                            colors: [
-                              Color(0xFFEC4E27),
-                              Color(0xFFF47E61),
-                            ],
-                          ),
-                        ),
-                        SizedBox(width: 14),
-                        Expanded(
-                          child: PageTale(
-                            title: 'My CV',
-                            description:
-                                'Keep your CV updated to get the best offers',
-                            imagePath: 'assets/icons/document.svg',
-                            colors: [
-                              Color(0xFF6B34C3),
-                              Color(0xFF8E5EDB),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
+                  const PageTaleList(),
                   const SizedBox(height: 20),
-                  for (var i = 0; i < 10; i++)
-                    Container(
-                      color: i.isOdd ? Colors.white : Colors.black12,
-                      height: 100,
-                      child: Center(
-                        child: Text('$i', textScaleFactor: 5),
-                      ),
-                    ),
+                  const MyJobOffers(),
+                  const SizedBox(height: 20),
+                  const StarredPosts(),
+                  const SizedBox(height: 48),
                 ],
               ),
             ),
           ),
-          ClipRect(
-            child: BackdropFilter(
-              filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
-              child: DecoratedBox(
-                decoration: BoxDecoration(color: Colors.white.withOpacity(0.7)),
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Container(height: 110),
-                    SizeTransition(
-                      axisAlignment: 1,
-                      sizeFactor: animation,
-                      child: const CollapsedHorizontalDates(),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ),
+          GlassFrostAppBar(mainScrollController: _scrollController),
         ],
       ),
     );
