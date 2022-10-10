@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 import 'package:qyre/core/core_styles.dart';
+import 'package:qyre/utils/date_utils.dart';
 
 class DateBar extends StatelessWidget {
   const DateBar({super.key, required this.date, this.circleColor});
@@ -32,7 +32,7 @@ class DateBar extends StatelessWidget {
               ),
             ),
           Text(
-            DateFormat('EEEE').format(date).substring(0, 3),
+            date.shortWeekString(),
             style: Theme.of(context)
                 .textTheme
                 .subtitle1
@@ -40,7 +40,7 @@ class DateBar extends StatelessWidget {
           ),
           const SizedBox(height: 2),
           Text(
-            DateFormat('MMMM').format(date).substring(0, 3),
+            date.shortMonthString(),
             style: Theme.of(context)
                 .textTheme
                 .subtitle2

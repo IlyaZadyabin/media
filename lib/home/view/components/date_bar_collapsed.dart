@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 import 'package:qyre/core/core_styles.dart';
+import 'package:qyre/utils/date_utils.dart';
 
 class DateBarCollapsed extends StatelessWidget {
   const DateBarCollapsed({super.key, required this.date, this.circleColor});
@@ -33,7 +33,7 @@ class DateBarCollapsed extends StatelessWidget {
                   ),
                 ),
               Text(
-                DateFormat('EEEE').format(date).substring(0, 3),
+                date.shortWeekString(),
                 style: Theme.of(context)
                     .textTheme
                     .subtitle1
@@ -57,8 +57,7 @@ class DateBarCollapsed extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(bottom: 2),
                 child: Text(
-                  '${date.day} '
-                  '${DateFormat('MMMM').format(date).substring(0, 3)}.',
+                  '${date.day} ${date.shortMonthString()}.',
                   style: Theme.of(context)
                       .textTheme
                       .subtitle1

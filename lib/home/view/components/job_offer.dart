@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 import 'package:qyre/core/core_styles.dart';
+import 'package:qyre/utils/date_utils.dart';
 
 class JobOffer extends StatelessWidget {
   const JobOffer({
@@ -42,7 +42,7 @@ class JobOffer extends StatelessWidget {
                     ?.copyWith(color: CoreStyles.black),
               ),
               Text(
-                DateFormat('MMM dd, yyyy').format(offerDate),
+                offerDate.shortString(),
                 style: Theme.of(context).textTheme.subtitle1?.copyWith(
                       color: CoreStyles.darkGrey,
                       fontWeight: FontWeight.w400,
@@ -64,8 +64,7 @@ class JobOffer extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                '${DateFormat('MMM dd, yyyy').format(startDate)} - '
-                '${DateFormat('MMM dd, yyyy').format(endDate)}',
+                '${startDate.shortString()} - ${endDate.shortString()}',
                 style: Theme.of(context).textTheme.subtitle1?.copyWith(
                       color: CoreStyles.darkGrey,
                       fontWeight: FontWeight.w400,

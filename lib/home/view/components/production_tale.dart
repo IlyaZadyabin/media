@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:intl/intl.dart';
 import 'package:qyre/core/core_styles.dart';
 import 'package:qyre/gen/assets.gen.dart';
+import 'package:qyre/utils/date_utils.dart';
 
 class ProductionTale extends StatelessWidget {
   const ProductionTale({
@@ -55,9 +55,8 @@ class ProductionTale extends StatelessWidget {
                             ),
                       ),
                       Text(
-                        '$location   '
-                        '${DateFormat('MMM dd, yyyy').format(startDate)} - '
-                        '${DateFormat('MMM dd, yyyy').format(endDate)}',
+                        '$location   ${startDate.shortString()} - '
+                        '${endDate.shortString()}',
                         style: Theme.of(context).textTheme.subtitle2?.copyWith(
                               color: CoreStyles.darkGrey,
                             ),
