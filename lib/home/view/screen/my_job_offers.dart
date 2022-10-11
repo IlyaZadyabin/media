@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:qyre/core/core_styles.dart';
 import 'package:qyre/home/view/components/job_offer.dart';
 
 class MyJobOffers extends StatelessWidget {
@@ -9,13 +10,7 @@ class MyJobOffers extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          'My job offers',
-          style: Theme.of(context)
-              .textTheme
-              .headline5
-              ?.copyWith(color: Colors.black),
-        ),
+        Text('My job offers', style: context.textTheme.headline3),
         const SizedBox(height: 10),
         JobOffer(
           title: 'Boom operator',

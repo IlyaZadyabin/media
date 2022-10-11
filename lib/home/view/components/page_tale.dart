@@ -35,17 +35,14 @@ class PageTale extends StatelessWidget {
           const SizedBox(height: 12),
           Text(
             title,
-            style: Theme.of(context).textTheme.bodyText2?.copyWith(
-                  color: CoreStyles.white,
-                  fontWeight: FontWeight.w700,
-                ),
+            style:
+                context.textTheme.headline5?.copyWith(color: CoreStyles.white),
           ),
           const SizedBox(height: 3),
           Text(
             description,
-            style: Theme.of(context).textTheme.subtitle2?.copyWith(
-                  color: CoreStyles.white,
-                ),
+            style:
+                context.textTheme.subtitle2?.copyWith(color: CoreStyles.white),
           ),
         ],
       ),

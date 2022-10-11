@@ -11,13 +11,7 @@ class ProductionsList extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          'Today’s productions',
-          style: Theme.of(context)
-              .textTheme
-              .headline5
-              ?.copyWith(color: CoreStyles.black, fontWeight: FontWeight.w400),
-        ),
+        Text('Today’s productions', style: context.textTheme.headline3),
         const SizedBox(height: 10),
         ProductionTale(
           title: 'Production Name That is Long',

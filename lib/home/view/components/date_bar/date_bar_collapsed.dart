@@ -26,18 +26,14 @@ class DateBarCollapsed extends StatelessWidget {
                   padding: const EdgeInsets.only(right: 2),
                   child: Text(
                     'TODAY',
-                    style: Theme.of(context).textTheme.subtitle1?.copyWith(
-                          fontSize: 10,
-                          color: CoreStyles.grey,
-                        ),
+                    style: context.textTheme.subtitle1
+                        ?.copyWith(color: CoreStyles.grey),
                   ),
                 ),
               Text(
                 date.shortWeekString(),
-                style: Theme.of(context)
-                    .textTheme
-                    .subtitle1
-                    ?.copyWith(color: CoreStyles.white, fontSize: 10),
+                style: context.textTheme.subtitle1
+                    ?.copyWith(color: CoreStyles.white),
               ),
             ],
           ),
@@ -58,10 +54,8 @@ class DateBarCollapsed extends StatelessWidget {
                 padding: const EdgeInsets.only(bottom: 2),
                 child: Text(
                   '${date.day} ${date.shortMonthString()}.',
-                  style: Theme.of(context)
-                      .textTheme
-                      .subtitle1
-                      ?.copyWith(color: CoreStyles.white, fontSize: 10),
+                  style: context.textTheme.subtitle1
+                      ?.copyWith(color: CoreStyles.white),
                 ),
               ),
             ],

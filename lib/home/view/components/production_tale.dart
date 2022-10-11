@@ -49,17 +49,16 @@ class ProductionTale extends StatelessWidget {
                       Text(
                         title,
                         overflow: TextOverflow.ellipsis,
-                        style: Theme.of(context).textTheme.bodyText1?.copyWith(
-                              color: CoreStyles.veryBlack,
-                              fontWeight: FontWeight.w700,
-                            ),
+                        style: context.textTheme.headline4?.copyWith(
+                          color: CoreStyles.veryBlack,
+                        ),
                       ),
                       Text(
                         '$location   ${startDate.shortString()} - '
                         '${endDate.shortString()}',
-                        style: Theme.of(context).textTheme.subtitle2?.copyWith(
-                              color: CoreStyles.darkGrey,
-                            ),
+                        style: context.textTheme.subtitle2?.copyWith(
+                          color: CoreStyles.darkGrey,
+                        ),
                       ),
                     ],
                   ),

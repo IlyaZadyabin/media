@@ -25,34 +25,27 @@ class DateBar extends StatelessWidget {
               padding: const EdgeInsets.only(bottom: 4),
               child: Text(
                 'TODAY',
-                style: Theme.of(context).textTheme.subtitle2?.copyWith(
-                      fontWeight: FontWeight.w600,
-                      color: CoreStyles.grey,
-                    ),
+                style: context.textTheme.subtitle1?.copyWith(
+                  color: CoreStyles.grey,
+                ),
               ),
             ),
           Text(
             date.shortWeekString(),
-            style: Theme.of(context)
-                .textTheme
-                .subtitle1
-                ?.copyWith(color: CoreStyles.white),
+            style:
+                context.textTheme.headline6?.copyWith(color: CoreStyles.white),
           ),
           const SizedBox(height: 2),
           Text(
             date.shortMonthString(),
-            style: Theme.of(context)
-                .textTheme
-                .subtitle2
-                ?.copyWith(color: CoreStyles.white),
+            style:
+                context.textTheme.subtitle2?.copyWith(color: CoreStyles.white),
           ),
           const SizedBox(height: 2),
           Text(
             date.day.toString(),
-            style: Theme.of(context)
-                .textTheme
-                .bodyText1
-                ?.copyWith(color: CoreStyles.white),
+            style:
+                context.textTheme.bodyText1?.copyWith(color: CoreStyles.white),
           ),
           if (circleColor != null)
             Container(

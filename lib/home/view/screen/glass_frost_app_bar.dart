@@ -1,7 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:qyre/home/view/screen/app_bar/collapsed_horizontal_dates.dart';
+import 'package:qyre/home/view/screen/horizontal_dates.dart';
 
 class GlassFrostAppBar extends StatefulWidget {
   const GlassFrostAppBar({super.key, required this.mainScrollController});
@@ -59,7 +59,10 @@ class _GlassFrostAppBarState extends State<GlassFrostAppBar>
               SizeTransition(
                 axisAlignment: 1,
                 sizeFactor: animation,
-                child: const CollapsedHorizontalDates(),
+                child: const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                  child: HorizontalDates(isCollapsed: true),
+                ),
               ),
             ],
           ),

@@ -48,9 +48,7 @@ class BottomNavigation extends StatelessWidget {
                     child: Text(
                       '2',
                       textAlign: TextAlign.center,
-                      style: Theme.of(context)
-                          .textTheme
-                          .subtitle2
+                      style: context.textTheme.subtitle2
                           ?.copyWith(color: CoreStyles.white),
                     ),
                   ),

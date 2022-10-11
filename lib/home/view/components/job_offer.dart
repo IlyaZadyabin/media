@@ -34,30 +34,19 @@ class JobOffer extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
-                title,
-                style: Theme.of(context)
-                    .textTheme
-                    .bodyText1
-                    ?.copyWith(color: CoreStyles.black),
-              ),
+              Text(title, style: context.textTheme.bodyText1),
               Text(
                 offerDate.shortString(),
-                style: Theme.of(context).textTheme.subtitle1?.copyWith(
-                      color: CoreStyles.darkGrey,
-                      fontWeight: FontWeight.w400,
-                    ),
+                style: context.textTheme.caption
+                    ?.copyWith(color: CoreStyles.darkGrey),
               ),
             ],
           ),
           const Divider(color: CoreStyles.white, thickness: 1),
           Text(
             companyName,
-            style: Theme.of(context).textTheme.subtitle1?.copyWith(
-                  color: CoreStyles.veryBlack,
-                  fontWeight: FontWeight.w500,
-                  fontSize: 14,
-                ),
+            style: context.textTheme.bodyText2
+                ?.copyWith(color: CoreStyles.veryBlack),
           ),
           const SizedBox(height: 5),
           Row(
@@ -65,17 +54,13 @@ class JobOffer extends StatelessWidget {
             children: [
               Text(
                 '${startDate.shortString()} - ${endDate.shortString()}',
-                style: Theme.of(context).textTheme.subtitle1?.copyWith(
-                      color: CoreStyles.darkGrey,
-                      fontWeight: FontWeight.w400,
-                    ),
+                style: context.textTheme.caption
+                    ?.copyWith(color: CoreStyles.darkGrey),
               ),
               Text(
                 amountOfDays == 1 ? '$amountOfDays day' : '$amountOfDays days',
-                style: Theme.of(context).textTheme.subtitle1?.copyWith(
-                      color: CoreStyles.darkGrey,
-                      fontWeight: FontWeight.w400,
-                    ),
+                style: context.textTheme.caption
+                    ?.copyWith(color: CoreStyles.darkGrey),
               ),
             ],
           ),

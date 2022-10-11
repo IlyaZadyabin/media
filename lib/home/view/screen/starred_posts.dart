@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:qyre/core/core_styles.dart';
 import 'package:qyre/home/view/components/starred_post.dart';
 
 class StarredPosts extends StatelessWidget {
@@ -9,13 +10,7 @@ class StarredPosts extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          'Starred posts',
-          style: Theme.of(context)
-              .textTheme
-              .headline5
-              ?.copyWith(color: Colors.black),
-        ),
+        Text('Starred posts', style: context.textTheme.headline3),
         const SizedBox(height: 10),
         StarredPost(
           title: 'Qyre US Production',

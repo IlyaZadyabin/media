@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:qyre/core/core_styles.dart';
-import 'package:qyre/home/view/screen/app_bar/glass_frost_app_bar.dart';
 import 'package:qyre/home/view/screen/bottom_navigation.dart';
-import 'package:qyre/home/view/screen/expanded_horizontal_dates.dart';
+import 'package:qyre/home/view/screen/glass_frost_app_bar.dart';
+import 'package:qyre/home/view/screen/horizontal_dates.dart';
 import 'package:qyre/home/view/screen/my_job_offers.dart';
 import 'package:qyre/home/view/screen/page_tale_list.dart';
 import 'package:qyre/home/view/screen/productions_list.dart';
@@ -45,12 +45,7 @@ class _HomeScreenState extends State<HomeScreen> {
         elevation: 0,
         backgroundColor: Colors.transparent,
         centerTitle: false,
-        title: Text(
-          'My Availability',
-          style: Theme.of(context).textTheme.headline5?.copyWith(
-                color: CoreStyles.black,
-              ),
-        ),
+        title: Text('My Availability', style: context.textTheme.headline3),
       ),
       bottomNavigationBar: const BottomNavigation(),
       body: Stack(
@@ -62,7 +57,7 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Column(
                 children: const [
                   SizedBox(height: 120),
-                  ExpandedHorizontalDates(),
+                  HorizontalDates(),
                   SizedBox(height: 20),
                   Tasks(),
                   SizedBox(height: 30),

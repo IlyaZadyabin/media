@@ -33,18 +33,11 @@ class StarredPost extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
-                title,
-                style: Theme.of(context).textTheme.bodyText1?.copyWith(
-                      color: CoreStyles.black,
-                    ),
-              ),
+              Text(title, style: context.textTheme.bodyText1),
               Text(
                 daysAgo == 1 ? '$daysAgo day ago' : '$daysAgo days ago',
-                style: Theme.of(context).textTheme.subtitle1?.copyWith(
-                      color: CoreStyles.darkGrey,
-                      fontWeight: FontWeight.w400,
-                    ),
+                style: context.textTheme.caption
+                    ?.copyWith(color: CoreStyles.darkGrey),
               ),
             ],
           ),
@@ -54,10 +47,8 @@ class StarredPost extends StatelessWidget {
             children: [
               Text(
                 descriptionTitle,
-                style: Theme.of(context).textTheme.bodyText2?.copyWith(
-                      color: CoreStyles.veryBlack,
-                      fontWeight: FontWeight.w500,
-                    ),
+                style: context.textTheme.bodyText2
+                    ?.copyWith(color: CoreStyles.veryBlack),
               ),
               const Spacer(),
               SvgPicture.asset(Assets.icons.list.path),
@@ -70,9 +61,7 @@ class StarredPost extends StatelessWidget {
           const SizedBox(height: 8),
           Text(
             description,
-            style: Theme.of(context)
-                .textTheme
-                .bodyText2
+            style: context.textTheme.bodyText2
                 ?.copyWith(color: CoreStyles.darkGrey, fontSize: 15),
           ),
         ],

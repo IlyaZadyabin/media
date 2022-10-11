@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+extension ThemeExtension on BuildContext {
+  TextTheme get textTheme => Theme.of(this).textTheme;
+}
+
 abstract class CoreStyles {
   static const Color black = Color(0xFF444444);
   static const Color veryBlack = Color(0xFF111111);
@@ -11,16 +15,31 @@ abstract class CoreStyles {
   static const Color blue = Color(0xFF87C6F5);
 
   static const String fontName = 'Matter';
-  static TextStyle defaultTextStyle = const TextStyle(fontFamily: fontName);
+  static TextStyle defaultTextStyle = const TextStyle(
+    fontFamily: fontName,
+    color: CoreStyles.black,
+  );
 
   static TextTheme textTheme = TextTheme(
-    headline5: defaultTextStyle.copyWith(
+    headline3: defaultTextStyle.copyWith(
       fontWeight: FontWeight.w600,
       fontSize: 18,
     ),
-    subtitle1: defaultTextStyle.copyWith(
+    headline4: defaultTextStyle.copyWith(
+      fontWeight: FontWeight.w700,
+      fontSize: 16,
+    ),
+    headline5: defaultTextStyle.copyWith(
+      fontWeight: FontWeight.w700,
+      fontSize: 14,
+    ),
+    headline6: defaultTextStyle.copyWith(
       fontWeight: FontWeight.w600,
       fontSize: 12,
+    ),
+    subtitle1: defaultTextStyle.copyWith(
+      fontWeight: FontWeight.w600,
+      fontSize: 10,
     ),
     subtitle2: defaultTextStyle.copyWith(
       fontWeight: FontWeight.w400,
@@ -33,6 +52,10 @@ abstract class CoreStyles {
     bodyText2: defaultTextStyle.copyWith(
       fontWeight: FontWeight.w400,
       fontSize: 14,
+    ),
+    caption: defaultTextStyle.copyWith(
+      fontWeight: FontWeight.w400,
+      fontSize: 12,
     ),
   );
 }

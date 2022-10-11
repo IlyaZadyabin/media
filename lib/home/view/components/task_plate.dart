@@ -28,10 +28,8 @@ class TaskPlate extends StatelessWidget {
         children: [
           Text(
             title,
-            style: Theme.of(context).textTheme.bodyText1?.copyWith(
-                  color: CoreStyles.veryBlack,
-                  fontWeight: FontWeight.w700,
-                ),
+            style: context.textTheme.headline4
+                ?.copyWith(color: CoreStyles.veryBlack),
           ),
           const SizedBox(height: 18),
           if (progress != null)
@@ -51,9 +49,9 @@ class TaskPlate extends StatelessWidget {
                 padding: const EdgeInsets.only(bottom: 3),
                 child: Text(
                   action,
-                  style: Theme.of(context).textTheme.bodyText2?.copyWith(
-                        color: CoreStyles.veryBlack,
-                      ),
+                  style: context.textTheme.bodyText2?.copyWith(
+                    color: CoreStyles.veryBlack,
+                  ),
                 ),
               ),
               const SizedBox(width: 4),
