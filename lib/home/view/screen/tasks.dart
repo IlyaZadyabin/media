@@ -10,6 +10,7 @@ class Tasks extends StatelessWidget {
       scrollDirection: Axis.horizontal,
       child: Row(
         children: const [
+          SizedBox(width: 16),
           TaskPlate(
             title: 'Complete your profile to optimize your exposure in job '
                 'searches.',
@@ -29,6 +30,7 @@ class Tasks extends StatelessWidget {
             action: 'Get verified',
             progress: null,
           ),
+          SizedBox(width: 16),
         ],
       ),
     );

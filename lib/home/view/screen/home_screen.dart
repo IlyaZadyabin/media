@@ -50,27 +50,36 @@ class _HomeScreenState extends State<HomeScreen> {
       bottomNavigationBar: const BottomNavigation(),
       body: Stack(
         children: [
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16),
-            child: SingleChildScrollView(
-              controller: _scrollController,
-              child: Column(
-                children: const [
-                  SizedBox(height: 120),
-                  HorizontalDates(),
-                  SizedBox(height: 20),
-                  Tasks(),
-                  SizedBox(height: 30),
-                  ProductionsList(),
-                  SizedBox(height: 20),
-                  PageTaleList(),
-                  SizedBox(height: 20),
-                  MyJobOffers(),
-                  SizedBox(height: 20),
-                  StarredPosts(),
-                  SizedBox(height: 48),
-                ],
-              ),
+          SingleChildScrollView(
+            key: const Key('home_screen_scroll_view'),
+            controller: _scrollController,
+            child: Column(
+              children: [
+                SizedBox(
+                  height: MediaQuery.of(context).padding.top +
+                      AppBar().preferredSize.height,
+                ),
+                const SizedBox(height: 16),
+                const HorizontalDates(),
+                const SizedBox(height: 20),
+                const Tasks(),
+                const SizedBox(height: 30),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                  child: Column(
+                    children: const [
+                      ProductionsList(),
+                      SizedBox(height: 20),
+                      PageTaleList(),
+                      SizedBox(height: 20),
+                      MyJobOffers(),
+                      SizedBox(height: 20),
+                      StarredPosts(),
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 48),
+              ],
             ),
           ),
           GlassFrostAppBar(mainScrollController: _scrollController),

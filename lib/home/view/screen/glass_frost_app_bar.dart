@@ -37,7 +37,7 @@ class _GlassFrostAppBarState extends State<GlassFrostAppBar>
     );
 
     widget.mainScrollController.addListener(() {
-      if (widget.mainScrollController.offset > 150) {
+      if (widget.mainScrollController.offset > 140) {
         _expandController.forward();
       } else {
         _expandController.reverse();
@@ -55,12 +55,12 @@ class _GlassFrostAppBarState extends State<GlassFrostAppBar>
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Container(height: 110),
+              Container(height: MediaQuery.of(context).padding.top),
               SizeTransition(
                 axisAlignment: 1,
                 sizeFactor: animation,
                 child: const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                  padding: EdgeInsets.symmetric(vertical: 8),
                   child: HorizontalDates(isCollapsed: true),
                 ),
               ),
