@@ -2,6 +2,8 @@
 
 Flutter application which implements special appbar transition
 
+<img src="app.gif" width="250" height="500"/>
+
 ---
 
 ## Getting Started 🚀
