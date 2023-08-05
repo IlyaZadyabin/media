@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:qyre/core/core_styles.dart';
-import 'package:qyre/gen/assets.gen.dart';
+import 'package:media/core/core_styles.dart';
+import 'package:media/gen/assets.gen.dart';
 
 class TaskPlate extends StatelessWidget {
   const TaskPlate({
@@ -28,8 +28,9 @@ class TaskPlate extends StatelessWidget {
         children: [
           Text(
             title,
-            style: context.textTheme.headline4
-                ?.copyWith(color: CoreStyles.veryBlack),
+            style: context.textTheme.headlineMedium?.copyWith(
+              color: CoreStyles.veryBlack,
+            ),
           ),
           const SizedBox(height: 18),
           if (progress != null)
@@ -49,7 +50,7 @@ class TaskPlate extends StatelessWidget {
                 padding: const EdgeInsets.only(bottom: 3),
                 child: Text(
                   action,
-                  style: context.textTheme.bodyText2?.copyWith(
+                  style: context.textTheme.bodyMedium?.copyWith(
                     color: CoreStyles.veryBlack,
                   ),
                 ),
@@ -57,7 +58,10 @@ class TaskPlate extends StatelessWidget {
               const SizedBox(width: 4),
               SvgPicture.asset(
                 Assets.icons.smallArrowRight.path,
-                color: CoreStyles.veryBlack,
+                colorFilter: const ColorFilter.mode(
+                  CoreStyles.veryBlack,
+                  BlendMode.srcIn,
+                ),
               ),
             ],
           ),

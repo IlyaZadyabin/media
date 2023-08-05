@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:qyre/core/core_styles.dart';
-import 'package:qyre/utils/date_utils.dart';
+import 'package:media/core/core_styles.dart';
+import 'package:media/utils/date_utils.dart';
 
 class JobOffer extends StatelessWidget {
   const JobOffer({
@@ -34,10 +34,10 @@ class JobOffer extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(title, style: context.textTheme.bodyText1),
+              Text(title, style: context.textTheme.bodyLarge),
               Text(
                 offerDate.shortString(),
-                style: context.textTheme.caption
+                style: context.textTheme.bodySmall
                     ?.copyWith(color: CoreStyles.darkGrey),
               ),
             ],
@@ -45,7 +45,7 @@ class JobOffer extends StatelessWidget {
           const Divider(color: CoreStyles.white, thickness: 1),
           Text(
             companyName,
-            style: context.textTheme.bodyText2
+            style: context.textTheme.bodyMedium
                 ?.copyWith(color: CoreStyles.veryBlack),
           ),
           const SizedBox(height: 5),
@@ -54,12 +54,12 @@ class JobOffer extends StatelessWidget {
             children: [
               Text(
                 '${startDate.shortString()} - ${endDate.shortString()}',
-                style: context.textTheme.caption
+                style: context.textTheme.bodySmall
                     ?.copyWith(color: CoreStyles.darkGrey),
               ),
               Text(
                 amountOfDays == 1 ? '$amountOfDays day' : '$amountOfDays days',
-                style: context.textTheme.caption
+                style: context.textTheme.bodySmall
                     ?.copyWith(color: CoreStyles.darkGrey),
               ),
             ],

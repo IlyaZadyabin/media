@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:qyre/core/core_styles.dart';
-import 'package:qyre/home/view/components/job_offer.dart';
+import 'package:media/core/core_styles.dart';
+import 'package:media/home/view/components/job_offer.dart';
 
 class MyJobOffers extends StatelessWidget {
   const MyJobOffers({super.key});
@@ -10,7 +10,7 @@ class MyJobOffers extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text('My job offers', style: context.textTheme.headline3),
+        Text('My job offers', style: context.textTheme.displaySmall),
         const SizedBox(height: 10),
         JobOffer(
           title: 'Boom operator',

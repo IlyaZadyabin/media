@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:qyre/core/core_styles.dart';
+import 'package:media/core/core_styles.dart';
 
 class PageTale extends StatelessWidget {
   const PageTale({
@@ -35,14 +35,16 @@ class PageTale extends StatelessWidget {
           const SizedBox(height: 12),
           Text(
             title,
-            style:
-                context.textTheme.headline5?.copyWith(color: CoreStyles.white),
+            style: context.textTheme.headlineSmall?.copyWith(
+              color: CoreStyles.white,
+            ),
           ),
           const SizedBox(height: 3),
           Text(
             description,
-            style:
-                context.textTheme.subtitle2?.copyWith(color: CoreStyles.white),
+            style: context.textTheme.titleSmall?.copyWith(
+              color: CoreStyles.white,
+            ),
           ),
         ],
       ),

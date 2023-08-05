@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:qyre/core/core_styles.dart';
-import 'package:qyre/utils/date_utils.dart';
+import 'package:media/core/core_styles.dart';
+import 'package:media/utils/date_utils.dart';
 
 class DateBar extends StatelessWidget {
   const DateBar({super.key, required this.date, this.circleColor});
@@ -25,7 +25,7 @@ class DateBar extends StatelessWidget {
               padding: const EdgeInsets.only(bottom: 4),
               child: Text(
                 'TODAY',
-                style: context.textTheme.subtitle1?.copyWith(
+                style: context.textTheme.titleMedium?.copyWith(
                   color: CoreStyles.grey,
                 ),
               ),
@@ -33,19 +33,19 @@ class DateBar extends StatelessWidget {
           Text(
             date.shortWeekString(),
             style:
-                context.textTheme.headline6?.copyWith(color: CoreStyles.white),
+                context.textTheme.titleLarge?.copyWith(color: CoreStyles.white),
           ),
           const SizedBox(height: 2),
           Text(
             date.shortMonthString(),
             style:
-                context.textTheme.subtitle2?.copyWith(color: CoreStyles.white),
+                context.textTheme.titleSmall?.copyWith(color: CoreStyles.white),
           ),
           const SizedBox(height: 2),
           Text(
             date.day.toString(),
             style:
-                context.textTheme.bodyText1?.copyWith(color: CoreStyles.white),
+                context.textTheme.bodyLarge?.copyWith(color: CoreStyles.white),
           ),
           if (circleColor != null)
             Container(

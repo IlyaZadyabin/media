@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:qyre/home/view/components/task_plate.dart';
+import 'package:media/home/view/components/task_plate.dart';
 
 class Tasks extends StatelessWidget {
   const Tasks({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
+    return const SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Row(
-        children: const [
+        children: [
           SizedBox(width: 16),
           TaskPlate(
             title: 'Complete your profile to optimize your exposure in job '

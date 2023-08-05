@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:qyre/core/core_styles.dart';
-import 'package:qyre/gen/assets.gen.dart';
-import 'package:qyre/home/view/components/production_tale.dart';
+import 'package:media/core/core_styles.dart';
+import 'package:media/gen/assets.gen.dart';
+import 'package:media/home/view/components/production_tale.dart';
 
 class ProductionsList extends StatelessWidget {
   const ProductionsList({super.key});
@@ -11,7 +11,7 @@ class ProductionsList extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text('Today’s productions', style: context.textTheme.headline3),
+        Text('Today’s productions', style: context.textTheme.displaySmall),
         const SizedBox(height: 10),
         ProductionTale(
           title: 'Production Name That is Long',

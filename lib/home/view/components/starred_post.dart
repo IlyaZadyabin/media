@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:qyre/core/core_styles.dart';
-import 'package:qyre/gen/assets.gen.dart';
+import 'package:media/core/core_styles.dart';
+import 'package:media/gen/assets.gen.dart';
 
 class StarredPost extends StatelessWidget {
   const StarredPost({
@@ -33,10 +33,10 @@ class StarredPost extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(title, style: context.textTheme.bodyText1),
+              Text(title, style: context.textTheme.bodyLarge),
               Text(
                 daysAgo == 1 ? '$daysAgo day ago' : '$daysAgo days ago',
-                style: context.textTheme.caption
+                style: context.textTheme.bodySmall
                     ?.copyWith(color: CoreStyles.darkGrey),
               ),
             ],
@@ -47,7 +47,7 @@ class StarredPost extends StatelessWidget {
             children: [
               Text(
                 descriptionTitle,
-                style: context.textTheme.bodyText2
+                style: context.textTheme.bodyMedium
                     ?.copyWith(color: CoreStyles.veryBlack),
               ),
               const Spacer(),
@@ -61,7 +61,7 @@ class StarredPost extends StatelessWidget {
           const SizedBox(height: 8),
           Text(
             description,
-            style: context.textTheme.bodyText2
+            style: context.textTheme.bodyMedium
                 ?.copyWith(color: CoreStyles.darkGrey, fontSize: 15),
           ),
         ],

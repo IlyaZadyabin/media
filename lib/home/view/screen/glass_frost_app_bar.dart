@@ -1,7 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:qyre/home/view/screen/horizontal_dates.dart';
+import 'package:media/home/view/screen/horizontal_dates.dart';
 
 class GlassFrostAppBar extends StatefulWidget {
   const GlassFrostAppBar({super.key, required this.mainScrollController});

@@ -21,39 +21,39 @@ abstract class CoreStyles {
   );
 
   static TextTheme textTheme = TextTheme(
-    headline3: defaultTextStyle.copyWith(
+    displaySmall: defaultTextStyle.copyWith(
       fontWeight: FontWeight.w600,
       fontSize: 18,
     ),
-    headline4: defaultTextStyle.copyWith(
+    headlineMedium: defaultTextStyle.copyWith(
       fontWeight: FontWeight.w700,
       fontSize: 16,
     ),
-    headline5: defaultTextStyle.copyWith(
+    headlineSmall: defaultTextStyle.copyWith(
       fontWeight: FontWeight.w700,
       fontSize: 14,
     ),
-    headline6: defaultTextStyle.copyWith(
+    titleLarge: defaultTextStyle.copyWith(
       fontWeight: FontWeight.w600,
       fontSize: 12,
     ),
-    subtitle1: defaultTextStyle.copyWith(
+    titleMedium: defaultTextStyle.copyWith(
       fontWeight: FontWeight.w600,
       fontSize: 10,
     ),
-    subtitle2: defaultTextStyle.copyWith(
+    titleSmall: defaultTextStyle.copyWith(
       fontWeight: FontWeight.w400,
       fontSize: 10,
     ),
-    bodyText1: defaultTextStyle.copyWith(
+    bodyLarge: defaultTextStyle.copyWith(
       fontWeight: FontWeight.w600,
       fontSize: 16,
     ),
-    bodyText2: defaultTextStyle.copyWith(
+    bodyMedium: defaultTextStyle.copyWith(
       fontWeight: FontWeight.w400,
       fontSize: 14,
     ),
-    caption: defaultTextStyle.copyWith(
+    bodySmall: defaultTextStyle.copyWith(
       fontWeight: FontWeight.w400,
       fontSize: 12,
     ),

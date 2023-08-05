@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:qyre/core/core_styles.dart';
-import 'package:qyre/gen/assets.gen.dart';
-import 'package:qyre/utils/date_utils.dart';
+import 'package:media/core/core_styles.dart';
+import 'package:media/gen/assets.gen.dart';
+import 'package:media/utils/date_utils.dart';
 
 class ProductionTale extends StatelessWidget {
   const ProductionTale({
@@ -49,14 +49,14 @@ class ProductionTale extends StatelessWidget {
                       Text(
                         title,
                         overflow: TextOverflow.ellipsis,
-                        style: context.textTheme.headline4?.copyWith(
+                        style: context.textTheme.headlineMedium?.copyWith(
                           color: CoreStyles.veryBlack,
                         ),
                       ),
                       Text(
                         '$location   ${startDate.shortString()} - '
                         '${endDate.shortString()}',
-                        style: context.textTheme.subtitle2?.copyWith(
+                        style: context.textTheme.titleSmall?.copyWith(
                           color: CoreStyles.darkGrey,
                         ),
                       ),
@@ -68,7 +68,10 @@ class ProductionTale extends StatelessWidget {
                   Assets.icons.smallArrowRight.path,
                   width: 10,
                   height: 10,
-                  color: CoreStyles.veryBlack,
+                  colorFilter: const ColorFilter.mode(
+                    CoreStyles.veryBlack,
+                    BlendMode.srcIn,
+                  ),
                 ),
               ],
             ),

@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:qyre/home/view/screen/horizontal_dates.dart';
-import 'package:qyre/main.dart';
+import 'package:media/home/view/screen/horizontal_dates.dart';
+import 'package:media/main.dart';
 
 void main() {
   testWidgets('Collapsed dates transition', (WidgetTester tester) async {

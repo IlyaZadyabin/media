@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:qyre/core/core_styles.dart';
-import 'package:qyre/home/view/screen/bottom_navigation.dart';
-import 'package:qyre/home/view/screen/glass_frost_app_bar.dart';
-import 'package:qyre/home/view/screen/horizontal_dates.dart';
-import 'package:qyre/home/view/screen/my_job_offers.dart';
-import 'package:qyre/home/view/screen/page_tale_list.dart';
-import 'package:qyre/home/view/screen/productions_list.dart';
-import 'package:qyre/home/view/screen/starred_posts.dart';
-import 'package:qyre/home/view/screen/tasks.dart';
+import 'package:media/core/core_styles.dart';
+import 'package:media/home/view/screen/bottom_navigation.dart';
+import 'package:media/home/view/screen/glass_frost_app_bar.dart';
+import 'package:media/home/view/screen/horizontal_dates.dart';
+import 'package:media/home/view/screen/my_job_offers.dart';
+import 'package:media/home/view/screen/page_tale_list.dart';
+import 'package:media/home/view/screen/productions_list.dart';
+import 'package:media/home/view/screen/starred_posts.dart';
+import 'package:media/home/view/screen/tasks.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -45,7 +45,7 @@ class _HomeScreenState extends State<HomeScreen> {
         elevation: 0,
         backgroundColor: Colors.transparent,
         centerTitle: false,
-        title: Text('My Availability', style: context.textTheme.headline3),
+        title: Text('My Availability', style: context.textTheme.displaySmall),
       ),
       bottomNavigationBar: const BottomNavigation(),
       body: Stack(
@@ -64,10 +64,10 @@ class _HomeScreenState extends State<HomeScreen> {
                 const SizedBox(height: 20),
                 const Tasks(),
                 const SizedBox(height: 30),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 16),
                   child: Column(
-                    children: const [
+                    children: [
                       ProductionsList(),
                       SizedBox(height: 20),
                       PageTaleList(),

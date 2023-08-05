@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:qyre/core/core_styles.dart';
-import 'package:qyre/gen/assets.gen.dart';
+import 'package:media/core/core_styles.dart';
+import 'package:media/gen/assets.gen.dart';
 
 class BottomNavigation extends StatelessWidget {
   const BottomNavigation({super.key});
@@ -48,7 +48,7 @@ class BottomNavigation extends StatelessWidget {
                     child: Text(
                       '2',
                       textAlign: TextAlign.center,
-                      style: context.textTheme.subtitle2
+                      style: context.textTheme.titleSmall
                           ?.copyWith(color: CoreStyles.white),
                     ),
                   ),

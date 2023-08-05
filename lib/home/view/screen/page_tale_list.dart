@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:qyre/gen/assets.gen.dart';
-import 'package:qyre/home/view/components/page_tale.dart';
+import 'package:media/gen/assets.gen.dart';
+import 'package:media/home/view/components/page_tale.dart';
 
 class PageTaleList extends StatelessWidget {
   const PageTaleList({super.key});
@@ -24,7 +24,7 @@ class PageTaleList extends StatelessWidget {
             child: PageTale(
               title: 'Quick hire',
               description: 'Hire someone quickly today',
-              imagePath: Assets.icons.qyre.path,
+              imagePath: Assets.icons.media.path,
               colors: const [Color(0xFFEC4E27), Color(0xFFF47E61)],
             ),
           ),
